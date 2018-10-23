@@ -14,11 +14,39 @@
 
 	<name>maven-practice-api</name>
 
+	<properties>
+		<endpoint>some.endpoint</endpoint>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<filter.name>dev</filter.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<filter.name>prod</filter.name>
+			</properties>
+		</profile>
+	</profiles>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<filters>
+			<filter>src/main/filters/${filter.name}.properties</filter>
+		</filters>
+	</build>
 
 </project>
