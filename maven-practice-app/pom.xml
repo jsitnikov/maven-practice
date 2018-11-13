@@ -32,36 +32,6 @@
             <artifactId>maven-practice-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-
-        <!-- Logging START -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <!-- Logging END -->
     </dependencies>
 
     <build>
@@ -94,16 +64,10 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <timestampFormat>yyyy-MM-dd</timestampFormat>
-                    <timestampPropertyName>build-timestamp</timestampPropertyName>
-                    <doCheck>true</doCheck>
-                    <doUpdate>true</doUpdate>
-                </configuration>
             </plugin>
         </plugins>
 
-        <finalName>project-${buildNumber}</finalName>
+        <finalName>app</finalName>
 
     </build>
 
