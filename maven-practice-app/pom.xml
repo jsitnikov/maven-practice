@@ -15,6 +15,10 @@
 
     <name>maven-practice-app</name>
 
+    <scm>
+        <connection>scm:git:https://github.com/jsitnikov/maven-practice.git</connection>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <slf4j.version>1.6.4</slf4j.version>
@@ -86,7 +90,7 @@
                     <execution>
                         <phase>validate</phase>
                         <goals>
-                            <goal>create-timestamp</goal>
+                            <goal>create</goal>
                         </goals>
                     </execution>
                 </executions>

@@ -39,4 +39,17 @@
             </resource>
         </resources>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <properties>
+                <param1>this parameter came from parent</param1>
+            </properties>
+        </profile>
+    </profiles>
 </project>

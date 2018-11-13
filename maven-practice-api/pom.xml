@@ -14,10 +14,6 @@
 
 	<name>maven-practice-api</name>
 
-	<properties>
-		<endpoint>some.endpoint</endpoint>
-	</properties>
-
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -45,6 +41,7 @@
 
 	<build>
 		<filters>
+			<filter>src/main/filters/base.properties</filter>
 			<filter>src/main/filters/${filter.name}.properties</filter>
 		</filters>
 	</build>

@@ -1,4 +1,30 @@
 = Maven
 
+.pom.xml
+[source,xml]
+----
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<filter.name>dev</filter.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<filter.name>prod</filter.name>
+			</properties>
+		</profile>
+	</profiles>
 
-
+	<build>
+		<filters>
+			<filter>src/main/filters/base.properties</filter>
+			<filter>src/main/filters/${filter.name}.properties</filter>
+		</filters>
+	</build>
+----
